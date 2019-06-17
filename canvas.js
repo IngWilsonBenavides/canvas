@@ -36,6 +36,8 @@ var c = canvas.getContext('2d');
 // }
 
 var x = 200;
+var dx = 4;
+var radius = 30;
 function animate() {
 	requestAnimationFrame(animate);
 	c.clearRect(0, 0, innerWidth, innerHeight);
@@ -45,7 +47,11 @@ function animate() {
 	c.strokeStyle = 'blue';
 	c.stroke();
 
-	x += 1;
+	if (x + radius > innerWidth) {
+		dx = -dx;
+	}
+
+	x += dx;
 }
 
 animate();
