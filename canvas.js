@@ -35,6 +35,11 @@ var c = canvas.getContext('2d');
 // 	c.stroke();
 // }
 
+window.addEventListener('mousemove', 
+	function() {
+		console.log('estesd');
+	})
+
 function Circle(x, y, dx, dy, radius) {
 	this.x = x;
 	this.y = y;
