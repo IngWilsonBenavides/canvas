@@ -26,7 +26,7 @@ c.stroke();
 //c.strokeStyle = 'blue';
 //c.stroke();
 
-for (var i = 0; i < 3; i++) {
+for (var i = 0; i < 100; i++) {
 	var x = Math.random() * window.innerWidth;
 	var y = Math.random() * window.innerHeight;
 	c.beginPath();
