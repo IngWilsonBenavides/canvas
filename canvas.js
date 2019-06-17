@@ -35,9 +35,16 @@ var c = canvas.getContext('2d');
 // 	c.stroke();
 // }
 
+var mouse = {
+	x: undefined,
+	y: undefined
+}
+
 window.addEventListener('mousemove', 
-	function() {
-		console.log('estesd');
+	function(event) {
+		mouse.x = event.x;
+		mouse.y = event.y;
+
 	})
 
 function Circle(x, y, dx, dy, radius) {
@@ -66,6 +73,11 @@ function Circle(x, y, dx, dy, radius) {
 
 		this.x += this.dx;
 		this.y += this.dy;
+
+		//interactivity
+		if (mouse.x - this.x < 50) {
+			this.radius += 1;
+		}
 		
 		this.draw();
 	}
