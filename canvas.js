@@ -47,6 +47,7 @@ function Circle(x, y, dx, dy, radius) {
 		c.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
 		c.strokeStyle = 'blue';
 		c.stroke();
+		c.fill();
 	}
 
 	this.update = function() {
@@ -76,7 +77,7 @@ for (var i = 0; i < 100; i++) {
 	var dy = (Math.random() - 0.5) * 8;	
 
 	circleArray.push(new Circle(x, y, dx, dy, radius));
-	var circle = new Circle(200, 200, 3, 3, 30);	
+	//var circle = new Circle(200, 200, 3, 3, 30);	
 }
 
 function animate() {
