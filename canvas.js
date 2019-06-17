@@ -38,6 +38,7 @@ var c = canvas.getContext('2d');
 var x = 200;
 function animate() {
 	requestAnimationFrame(animate);
+	c.clearRect(0, 0, innerWidth, innerHeight);
 
 	c.beginPath();
 	c.arc(x, 200, 30, 0, Math.PI * 2, false);
